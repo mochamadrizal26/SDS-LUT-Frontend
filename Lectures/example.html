@@ -36,11 +36,67 @@
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Omnis laboriosam <strong>perspiciatis</strong> molestiae delectus iure autem 
-                animi deserunt enim quae doloribus atque fugiat, illo perferendis? 
+                animi deserunt enim quae doloribus <span>atque</span> fugiat, illo perferendis? 
                 Ipsam <em>blanditiis</em> incidunt aspernatur sed aut!
             </p>
             <div>
                 <h3>Comment :</h3>
+                <form action="" method="POST">
+                    <input type="text" id="first-name" name="first-name">
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                     <input type="color" id="color" name="color">
+                    <input type="date" id="date" name="date">
+                    <input type="datetime" id="datetime" name="datetime">
+                    <input type="datetime-local" id="datetime-local" name="datetime-local">
+                    <input type="email" id="email" name="email" placeholder="your@mail.com">
+                    <input type="file" id="file" name="file">
+                    <input type="hidden" id="hidden" namehidden>
+                    <input type="image" src="flower.jpg" alt="Submit" width="48" height="48">
+                    <input type="month" id="month" name="month">
+                    <input type="number" id="number" name="number">
+                    <input type="password" id="password" name="password">
+                    <input type="radio" id="radio" name="radio">
+                    <input type="range" id="range" name="range" min="1" max="5">
+                    <input type="search" id="search" name="search">
+                    <input type="tel" id="tel" name="tel">
+                    <input type="text" id="text" name="text">
+                    <input type="time" id="time" name="time">
+                    <input type="url" id="url" name="url">
+                    <input type="week" id="week" name="week">
+                    <input type="reset" id="" name="">
+
+                    <select name="car" id="car-select">
+                        <option value="tesla">Tesla</option>
+                        <option value="lada" selected="selected">Lada</option>
+                        <option value="sisu">Sisu</option>
+                        <option value="porsche">Porsche</option>
+                    </select>
+
+                    <textarea id="bigText" rows="8" cols="50">Howdy!</textarea>
+
+                    <input id="rocket" list="rocket-list" name="rocket-list">
+                    <datalist id="rocket-list">
+                        <option value="Saturn V"/>
+                        <option value="Falcon 9"/>
+                        <option value="Starship"/>
+                        <option value="Ariane 5"/>
+                        <option value="N1"/>
+                        <option value="Long March 5"/>                        
+                    </datalist>
+
+                    <label for="ice-cream-choice">Choose a flavor:</label>
+                    <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
+                    <datalist id="ice-cream-flavors">
+                        <option value="Chocolate"/>
+                        <option value="Coconut"/>
+                        <option value="Mint"/>
+                        <option value="Strawberry"/>
+                        <option value="Vanilla"/>
+                    </datalist> 
+
+
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </article>
         <article>

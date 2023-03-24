@@ -1,4 +1,50 @@
-console.log("Hello");
+if(document.readyState !== "loading"){
+    console.log("Document is ready");
+    initializeCode();
+} else {
+    document.addEventListener("DOMContentLoaded", function(){
+        console.log("Document ready after waiting!");
+        initializeCode();
+    })
+}
+
+let panicCounter = 0;
+
+function initializeCode() {
+    const addTextButton = document.getElementById("add-text");
+
+    addTextButton.addEventListener("click", function() {
+        const bigText = document.getElementById("big-text");
+        
+        //console.log("working!");
+        bigText.innerHTML = bigText.innerHTML + (Math.random() + 1).toString(36);
+    });
+
+    const panicButton = document.getElementById("panic-button");
+
+    panicButton.addEventListener("click", function() {
+        const panicArea = document.getElementById("panic-area");
+        
+        let newParagraph = document.createElement("p");
+
+        let stars = "*".repeat(panicCounter++);
+
+        newParagraph.innerHTML = stars + "PANIC" + stars; 
+        
+        panicArea.appendChild(newParagraph);
+    });
+
+    const reducePanicButton = document.getElementById("reduce-panic-button");
+
+    reducePanicButton.addEventListener("click", function() {
+        const panicArea = document.getElementById("panic-area");
+        
+        panicArea.removeChild(panicArea.lastChild);
+        panicCounter--;
+    });
+}
+
+/*console.log("Hello");
 
 //array
 let numbers = [];
@@ -44,4 +90,4 @@ students.forEach(element => console.log(element));
 while(students.length > 0) {
     console.log(students.pop());
 }
-console.log(students);
+console.log(students);*/
